@@ -56,3 +56,31 @@ export function getUTCTime() {
 
   return utcTime;
 }
+
+// New functions for IST conversion
+export function getISTDatetime() {
+  const options = {
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+    hourCycle: 'h23',
+    timeZone: 'Asia/Kolkata', // IST timezone
+  };
+
+  return date.toLocaleString('en-IN', options);
+}
+
+export function getISTTime() {
+  const options = {
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+    hourCycle: 'h23',
+    timeZone: 'Asia/Kolkata', // IST timezone
+  };
+
+  return date.toLocaleString('en-IN', options);
+}

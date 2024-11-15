@@ -152,11 +152,11 @@ function App() {
   return (
     <Container
       sx={{
-        maxWidth: { xs: '95%', sm: '80%', md: '1100px' },
+        maxWidth: { xs: '95%', sm: '80%', md: '90%' },
         width: '100%',
         height: '100%',
         margin: '0 auto',
-        padding: '1rem 0 3rem',
+        padding: '1rem 0 2rem',
         marginBottom: '1rem',
         borderRadius: {
           xs: 'none',
@@ -176,7 +176,7 @@ function App() {
             alignItems="center"
             sx={{
               width: '100%',
-              marginBottom: '1rem',
+              marginBottom: '2rem',
             }}
           >
             <Box

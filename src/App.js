@@ -182,7 +182,7 @@ function App() {
             <Box
               component="img"
               sx={{
-                height: { xs: '16px', sm: '22px', md: '26px' },
+                height: { xs: '36px', sm: '42px', md: '46px' },
                 width: 'auto',
               }}
               alt="logo"

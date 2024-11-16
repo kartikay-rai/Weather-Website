@@ -32,32 +32,6 @@ export function transformDateFormat() {
   return newFormatDate;
 }
 
-export function getUTCDatetime() {
-  const utcTime = date.toLocaleString('en-US', {
-    hour: '2-digit',
-    minute: '2-digit',
-    hourCycle: 'h23',
-    timeZone: 'UTC',
-  });
-
-  const isoDateString = new Date().toISOString();
-  const utcDate = isoDateString.split('T')[0].concat(' ', utcTime);
-  return utcDate;
-}
-
-export function getUTCTime() {
-  const utcTime = date.toLocaleString('en-US', {
-    hour: '2-digit',
-    minute: '2-digit',
-    second: '2-digit',
-    hourCycle: 'h23',
-    timeZone: 'UTC',
-  });
-
-  return utcTime;
-}
-
-// New functions for IST conversion
 export function getISTDatetime() {
   const options = {
     year: 'numeric',
@@ -67,7 +41,7 @@ export function getISTDatetime() {
     minute: '2-digit',
     second: '2-digit',
     hourCycle: 'h23',
-    timeZone: 'Asia/Kolkata', // IST timezone
+    timeZone: 'Asia/Kolkata', 
   };
 
   return date.toLocaleString('en-IN', options);

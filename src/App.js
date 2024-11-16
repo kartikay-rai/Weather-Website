@@ -11,6 +11,8 @@ import { ReactComponent as SplashIcon } from './assets/splash-icon.svg';
 import Logo from './assets/logo.png';
 import ErrorBox from './components/Reusable/ErrorBox';
 import { ALL_DESCRIPTIONS } from './utilities/DateConstants';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import WindyEmbed from './components/Reusable/WindyEmbed';  // Import WindyEmbed component
 import {
   getTodayForecastWeather,
   getWeekForecastWeather,
@@ -152,11 +154,11 @@ function App() {
   return (
     <Container
       sx={{
-        maxWidth: { xs: '95%', sm: '80%', md: '90%' },
+        maxWidth: { xs: '95%', sm: '80%', md: '1100px' },
         width: '100%',
         height: '100%',
         margin: '0 auto',
-        padding: '1rem 0 2rem',
+        padding: '1rem 0 3rem',
         marginBottom: '1rem',
         borderRadius: {
           xs: 'none',
@@ -182,7 +184,7 @@ function App() {
             <Box
               component="img"
               sx={{
-                height: { xs: '46px', sm: '52px', md: '56px' },
+                height: { xs: '16px', sm: '32px', md: '86px' },
                 width: 'auto',
               }}
               alt="logo"
@@ -190,11 +192,30 @@ function App() {
             />
 
             <UTCDatetime />
+            <Link
+              href="https://github.com/Amin-Awinti"
+              target="_blank"
+              underline="none"
+              sx={{ display: 'flex' }}
+            >
+              <GitHubIcon
+                sx={{
+                  fontSize: { xs: '20px', sm: '22px', md: '26px' },
+                  color: 'white',
+                  '&:hover': { color: '#2d95bd' },
+                }}
+              />
+            </Link>
           </Box>
           <Search onSearchChange={searchChangeHandler} />
         </Grid>
         {appContent}
       </Grid>
+
+      {/* WindyEmbed at the bottom */}
+      <Box sx={{ marginTop: '3rem' }}>
+        <WindyEmbed />
+      </Box>
     </Container>
   );
 }

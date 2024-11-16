@@ -10,6 +10,7 @@ import LoadingBox from './components/Reusable/LoadingBox';
 import { ReactComponent as SplashIcon } from './assets/splash-icon.svg';
 import Logo from './assets/logo.png';
 import ErrorBox from './components/Reusable/ErrorBox';
+import WindyEmbed from './components/Reusable/WindyEmbed'; 
 import { ALL_DESCRIPTIONS } from './utilities/DateConstants';
 import {
   getTodayForecastWeather,
@@ -195,6 +196,9 @@ function App() {
         </Grid>
         {appContent}
       </Grid>
+      <Box sx={{ marginTop: '3rem' }}>
+        <WindyEmbed />
+      </Box>
     </Container>
   );
 }

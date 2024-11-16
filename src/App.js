@@ -5,7 +5,7 @@ import WeeklyForecast from './components/WeeklyForecast/WeeklyForecast';
 import TodayWeather from './components/TodayWeather/TodayWeather';
 import { fetchWeatherData } from './api/OpenWeatherService';
 import { transformDateFormat } from './utilities/DatetimeUtils';
-import UTCDatetime from './components/Reusable/UTCDatetime';
+import ISTDatetime from './components/Reusable/ISTDatetime';
 import LoadingBox from './components/Reusable/LoadingBox';
 import { ReactComponent as SplashIcon } from './assets/splash-icon.svg';
 import Logo from './assets/logo.png';
@@ -190,7 +190,7 @@ function App() {
               src={Logo}
             />
 
-            <UTCDatetime />
+            <ISTDatetime />
           </Box>
           <Search onSearchChange={searchChangeHandler} />
         </Grid>

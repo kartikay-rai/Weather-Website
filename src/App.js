@@ -176,13 +176,13 @@ function App() {
             alignItems="center"
             sx={{
               width: '100%',
-              marginBottom: '2rem',
+              marginBottom: '1rem',
             }}
           >
             <Box
               component="img"
               sx={{
-                height: { xs: '36px', sm: '42px', md: '46px' },
+                height: { xs: '46px', sm: '52px', md: '56px' },
                 width: 'auto',
               }}
               alt="logo"
